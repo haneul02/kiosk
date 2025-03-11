@@ -3,13 +3,18 @@ import java.util.List;
 
 public class MenuItem {
 
+    // 메뉴 리스트에 저장하는 변수
     public static List<MenuItem> menuItem = new ArrayList<>();
 
-    public int number;
-    public String name;
-    public double price;
-    public String description;
+    // 메뉴 항목 속성
+    public int number;          // 메뉴 번호
+    public String name;         // 메뉴 이름
+    public double price;        // 가격
+    public String description;  // 메뉴 설명
 
+    // MenuItem : 필요한 값들을 초기화하는 역할
+    // 매개변수(입력값)으로 받은 데이터를 this 키워드를 사용해 객체의 필드(속성)에 저장
+    // this.number = 객체의 속성, number = 매개변수
     public MenuItem(int number, String name, double price, String description){
         this.number = number;
         this.name = name;
@@ -17,6 +22,7 @@ public class MenuItem {
         this.description = description;
     }
 
+    // 메뉴 목록을 menuItem 리스트에 추가
     static{
         menuItem.add(new MenuItem(1, "경양식 돈가스", 9.5, "옛날 경양식 소스가 뿌려진 돈가스"));
         menuItem.add(new MenuItem(2, "달콤하와이 돈가스", 10.5, "달콤한 소스와 파인애플이 올라간 돈가스"));
@@ -29,6 +35,7 @@ public class MenuItem {
 
     }
 
+    // 번호. 메뉴이름 | 가격 | 설명 형식으로 출력
     @Override
     public String toString(){
         return number + ". " + name + " | " + price + " | " + description;
