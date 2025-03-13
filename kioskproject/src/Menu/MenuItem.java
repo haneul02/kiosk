@@ -1,3 +1,5 @@
+package Menu;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +24,7 @@ public class MenuItem {
         this.description = description;
     }
 
+
     // 메뉴 목록을 menuItem 리스트에 추가
     static{
         menuItem.add(new MenuItem(1, "경양식 돈가스", 9.5, "옛날 경양식 소스가 뿌려진 돈가스"));
@@ -32,7 +35,6 @@ public class MenuItem {
         menuItem.add(new MenuItem(6, "매콤고구마치즈 돈가스", 12.0, "치즈 돈가스에 매콤소스를 뿌려 그위에 달달구리한 고구마 무스를 올렸다."));
         menuItem.add(new MenuItem(7, "함박스테이크", 10.5, "함박스테이크위에 계란 후라이를 얹어 드려요"));
         menuItem.add(new MenuItem(8, "생선가스", 11.0, "부드러운 생선가스 위에 타르타르소스가 올라갔습니당."));
-
     }
 
     // 번호. 메뉴이름 | 가격 | 설명 형식으로 출력
