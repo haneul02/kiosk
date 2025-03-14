@@ -1,7 +1,7 @@
 package Main;
 
-import Menu.Menu;
 import Kiosk.Kiosk;
+import Menu.Menu;
 
 public class Main {
 

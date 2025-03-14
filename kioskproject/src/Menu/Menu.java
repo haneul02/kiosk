@@ -3,7 +3,7 @@ package Menu;
 import java.util.List;
 
 public class Menu {
-    public List<MenuItem> foodMenu = MenuItem.menuItem;
+    public List<MenuItem> foodMenu = MenuItem.menuItemList;
     public List<Drink> drinkMenu = Drink.drink;
     public List<Desserts> dessertMenu = Desserts.desserts;
 

@@ -1,5 +1,6 @@
 package Kiosk;
 
+import Admin.Manager;
 import Menu.Menu;
 
 import java.util.List;
@@ -8,11 +9,13 @@ import java.util.Scanner;
 public class Kiosk {
 
     private Menu menu;
+    private Manager manager;
     private Scanner sc;
 
 
     public Kiosk(Menu menu) {
         this.menu = menu;
+        this.manager = new Manager();
         this.sc = new Scanner(System.in);
     }
 
@@ -23,10 +26,11 @@ public class Kiosk {
             System.out.println("1. Main Menu");
             System.out.println("2. Drinks");
             System.out.println("3, Desserts");
+            System.out.println("4. 관리자 모드");
             System.out.println("0. 종료");
             System.out.print("번호를 선택하세요 : ");
 
-            int choice = getValidChoice(0, 3);
+            int choice = getValidChoice(0, 4);
 
             if(choice == 0){
                 System.out.println("키오스크를 종료합니다.");
@@ -39,6 +43,8 @@ public class Kiosk {
                 selectMenu(menu.drinkMenu, "음료");
             } else if (choice == 3){
                 selectMenu(menu.dessertMenu, "디저트");
+            } else if(choice == 4){
+                manager.startAdmin();
             }
         }
     }
