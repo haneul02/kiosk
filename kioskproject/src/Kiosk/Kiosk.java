@@ -11,7 +11,7 @@ public class Kiosk {
     private Menu menu;
     private Manager manager;
     private Scanner sc;
-
+    
 
     public Kiosk(Menu menu) {
         this.menu = menu;
